@@ -5,7 +5,7 @@ import {address} from './config'
 
 import { useEffect } from 'react';
 
-function verifyToken(token: String) {
+function verifyToken(token: string) {
     let valid;
 
     axios.post(`${address}/auth/verify`)
