@@ -8,7 +8,7 @@ function Login() {
 
     const [errorMessage, setErrorMessage] = useState("");
 
-    function handleSubmit(e: Event) {
+    function handleSubmit(e: any) {
         e.preventDefault();
 
         const form = e.target;

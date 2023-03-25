@@ -2,16 +2,17 @@ import {useState, useEffect} from 'react';
 import {useLoaderData, useRouteLoaderData, Link, useParams} from 'react-router-dom'
 import classNames from 'classnames';
 import {address} from './config';
+import IEvent from './IEvent';
 
 function Event() {
     const auth = localStorage.getItem('token');
 
-    const events = useRouteLoaderData("eventList");
-    const event = useLoaderData();
+    const events = useRouteLoaderData("eventList") as Array<IEvent>;
+    const event = useLoaderData() as IEvent;
     const { id } = useParams();
 
     function DirLinks() {
-        let eventIndx =  events.findIndex(event => event.id === parseInt(id));
+        let eventIndx =  events.findIndex(event => event.id === parseInt(id!));
 
         let prev = eventIndx < events.length - 1 ? eventIndx + 1 : null;
         let prevId = prev ? events[prev]["id"] : null;

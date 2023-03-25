@@ -27,7 +27,7 @@ function Create() {
         handout_url: ""
     });
 
-    function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    function handleSubmit(e: any) {
         console.log(localStorage.getItem('token'))
 
         e.preventDefault();
@@ -35,7 +35,7 @@ function Create() {
         const form = e.target;
         const formData = new FormData(form);
 
-        formData.set('date', new Date(formData.get('date')).toISOString());
+        formData.set('date', new Date(String(formData.get('date')!)).toISOString());
 
         // formJson['date'] = new Date(formJson['date']).toISOString();
 

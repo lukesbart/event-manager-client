@@ -2,7 +2,7 @@ import {useRouteError} from 'react-router-dom'
 
 function Login() {
 
-    const error = useRouteError();
+    const error = useRouteError() as any;
     
     return (
         <main className="pt-8 flex justify-center items-center">

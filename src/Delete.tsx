@@ -2,9 +2,10 @@ import {useState} from 'react'
 import {Link, useLoaderData, useParams} from 'react-router-dom'
 import axios from 'axios'
 import {address} from './config'
+import IEvent from './IEvent'
 
 function Delete() {
-    const event = useLoaderData();
+    const event = useLoaderData() as IEvent;
     const { id } = useParams();
     const [eventDeleted, setEventDeleted] = useState(false);
 

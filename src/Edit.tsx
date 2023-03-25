@@ -2,9 +2,10 @@ import {useState} from 'react'
 import { Link, useLoaderData, useParams } from 'react-router-dom'
 import axios from 'axios'
 import {address} from './config';
+import IEvent from './IEvent';
 
 function Edit() {
-    const event = useLoaderData();
+    const event = useLoaderData() as IEvent;
     const { id } = useParams();
 
     console.log(event)
@@ -35,12 +36,12 @@ function Edit() {
     const [errorMessage, setErrorMessage] = useState("")
     const [successMessage, setSuccessMessage] = useState("");
 
-    function handleSubmit(e: Event) {
+    function handleSubmit(e: any) {
         e.preventDefault();
 
         const form = e.target;
         const formData = new FormData(form);
-        formData.set('date', new Date(formData.get('date')).toISOString());
+        formData.set('date', new Date(String(formData.get('date')!)).toISOString());
     
         const formJson = Object.fromEntries(formData.entries());
 

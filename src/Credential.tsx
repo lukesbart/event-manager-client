@@ -19,10 +19,10 @@ function verifyToken(token: string) {
     return valid;
 }
 
-export const Credential = ({children}) => {
+export const Credential = (children: any) => {
     useEffect(() => {
         const handleTokenChange = () => {
-            if(!verifyToken(localStorage.getItem('token'))) {
+            if(!verifyToken(localStorage.getItem('token')!)) {
                 localStorage.removeItem('token');
                 window.location.reload();
             }
@@ -33,7 +33,7 @@ export const Credential = ({children}) => {
 
     }, [])
 
-    if (Date.now() > parseInt(localStorage.getItem('tokenttl'))) {
+    if (Date.now() > parseInt(localStorage.getItem('tokenttl')!)) {
         localStorage.removeItem('token');
         localStorage.removeItem('tokenttl');
     }
