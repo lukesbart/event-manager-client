@@ -5,6 +5,8 @@ import {address} from './config'
 
 import { useEffect } from 'react';
 
+
+
 function verifyToken(token: string) {
     let valid;
 
@@ -19,7 +21,7 @@ function verifyToken(token: string) {
     return valid;
 }
 
-export const Credential = (children: any) => {
+export const Credential = ({children} : any) => {
     useEffect(() => {
         const handleTokenChange = () => {
             if(!verifyToken(localStorage.getItem('token')!)) {
