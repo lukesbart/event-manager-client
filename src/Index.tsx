@@ -4,7 +4,7 @@ function Index() {
     return (
       <div className="h-full sm:h-screen mb-20 lg:mb-0">
                 <div className="h-3/6 sm:h-5/6 md:h-5/6 bg-cover bg-no-repeat flex items-center"
-                    style={{backgroundImage: "url('/src/assets/headway-F2KRf_QfCqw-unsplash.jpg')"}}>
+                    style={{backgroundImage: "url('/headway-F2KRf_QfCqw-unsplash.jpg')"}}>
                     <div className="container mx-auto pl-3">
                         <div className="">
                             <h1 className="text-cyan-50 align-middle text-xl backdrop-blur-[1px]">An Event-Manager Webapp
