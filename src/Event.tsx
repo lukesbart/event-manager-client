@@ -68,7 +68,6 @@ function Event() {
         )
     }
 
-
     function toggleAudioVideo() {
         setVideoActive(!videoActive)
     }
@@ -111,7 +110,7 @@ function Event() {
                 </div>
                 <div className="my-4">
                     <h2 className="text-2xl">Handout</h2>
-                    <p>Link: <a href="#">{event['handout_url']}</a></p>
+                    <p>Link: <a href={`${address}/assets/${event["handout_url"]}`}>{event['handout_url']}</a></p>
                 </div>
                 <div className="text-center">
                     

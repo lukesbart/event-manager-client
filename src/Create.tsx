@@ -53,7 +53,7 @@ function Create() {
                 description: formJson['description'],
                 mp3: formJson['mp3'],
                 mp4: formJson['mp4'],
-                pdf: formJson['handout'] 
+                handout: formJson['handout'] 
             },
             headers: {
                 'Content-Type': 'multipart/form-data',
@@ -107,7 +107,7 @@ function Create() {
                             </div>
                             <div className="mb-2">
                                 <label className="mr-2">PDF:</label>
-                                <input type="file" name="pdf" />
+                                <input type="file" name="handout" />
                             </div>
                         </div>
 

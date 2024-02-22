@@ -21,16 +21,10 @@ function Index() {
                 <div className="container mx-auto max-md:px-4 pb-6">
                     <p className="text-white text-xl mt-4">About Event Manager</p>
                     <p className="text-white text-base">Event Manager is a personal project written with an Express.JS
-                        backend,
-                        and a React Front End. The UI is built with Tailwind CSS. The navigation within the client side
-                        is
-                        built with React Router. Authentication for the app is provided by a combination of HTTP Local
-                        Authentication
-                        and JSON Web Tokens. This app allows an event manager to create different meetings for an event
-                        with
-                        file
-                        uploads
-                        including MP3, MP4, and PDF assets.</p>
+                        backend, and a React Front End. The UI is built with Tailwind CSS. The navigation within the client side
+                        is built with React Router. Authentication for the app is provided by JSON Web Tokens in localStorage.
+                        This app allows an event manager to create different meetings for an event with file
+                        uploads including MP3, MP4, and PDF assets.</p>
                 </div>
             </div>
     )

@@ -43,7 +43,7 @@ const router = createBrowserRouter(
           element: <Index />,
         },
         {
-          path: "/event",
+          path: "/event/",
           element: <Events />,
           loader: async() => {
             let responseData;
@@ -145,7 +145,7 @@ const router = createBrowserRouter(
           element: <Signout />
         },
         {
-          path: '*',
+          path: '/*',
           element: <NotFound />
         },
         {
